@@ -212,7 +212,7 @@
 }
 
 .leftSideColumn img {
-    width: 150px;
+    width: 130px;
     height: auto;
     object-fit: contain;
 }
@@ -256,7 +256,7 @@
     }
 
     .leftSideColumn img {
-        width: 200px; /* Tamaño mediano en móvil */
+        width: 100px; /* Tamaño mediano en móvil */
         margin: 1rem 0;
     }
 

@@ -206,57 +206,68 @@ button[onclick="realizarCompra()"]:hover {
     background-color: #018786;
 }
 /* --- Footer --- */
-.footer {
-    background-color: #6200ea; /* Color primario */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+
+/* Estilos base del footer */
+
+
+/* Estilos del logo */
+.footer-content .logo {
+    width: auto;
+    min-width: 120px;
+    max-width: 180px;
+    height: auto;
 }
 
-.footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-logo img {
-    max-width: 120px;
-    border-radius: 8px;
-}
-
+/* Estilos de los iconos sociales */
 .footer-social {
     display: flex;
-    gap: 15px;
-}
+    justify-content: space-between; /* Asegura que los iconos estén equidistantes */
+    width: 100%; /* Asegura que los iconos ocupen todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo para los iconos */
+    font-size: 1.5rem;
+    margin: 0.5rem 0; 
+} 
 
 .footer-social a {
     color: white;
-    font-size: 24px;
     text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.footer-social a:hover {
+.footer-social .material-icons {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover .material-icons {
     transform: scale(1.2);
-    color: #bb86fc; /* Color secundario */
 }
 
+/* Copyright */
 .footer-copyright {
+    text-align: center;
     font-size: 0.9rem;
-    opacity: 0.8;
+    opacity: 0.9;
+    line-height: 1.5;
 }
 
-/* Responsividad */
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
-    .footer-content {
-        gap: 10px;
+    .footer {
+        padding: 1.5rem 0;
     }
 
-    .footer-social a {
-        font-size: 20px;
+    .footer-content .logo {
+        min-width: 100px;
+        max-width: 140px;
+    }
+
+    .footer-social .material-icons {
+        font-size: 1.5rem;
     }
 }
+
+
+/* ---- */
 .producto.md-3 {
     margin: 1rem; /* Margen uniforme */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para efecto flotante */
@@ -303,3 +314,36 @@ main {
     padding: 0;
     box-sizing: border-box;
 } */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #FFD700; /* Ejemplo de color dorado en hover */
+  }
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Espacio entre los iconos */
+  }
+  
+  .social-icons a {
+    color: white; /* Color blanco para los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color: #FFB74D; /* Color al hacer hover */
+  }
