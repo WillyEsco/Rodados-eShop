@@ -172,7 +172,7 @@
 /* Contenedor de la imagen */
 .image-container {
     width: 100%; /* Asegura que el contenedor ocupa todo el ancho de la card */
-    height: 200px; /* Define una altura fija */
+    height: 400px; /* Define una altura fija */
     overflow: hidden; /* Oculta cualquier parte de la imagen que salga del contenedor */
     display: flex;
     justify-content: center;
@@ -212,9 +212,10 @@
 }
 
 .leftSideColumn img {
-    width: 130px;
+    width: 150px;
     height: auto;
     object-fit: contain;
+    margin: 0 !important;
 }
 
 /* Lista de productos */
