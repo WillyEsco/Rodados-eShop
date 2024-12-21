@@ -1,0 +1,188 @@
+/* Contenedor principal del carrito */
+#carrito {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#carrito h2 {
+    color: #6200ea;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Lista de productos en el carrito */
+#lista-carrito {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilo para cada item del carrito */
+.item-carrito {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.item-carrito:hover {
+    background-color: #f8f8f8;
+}
+
+.item-carrito:last-child {
+    border-bottom: none;
+}
+
+/* Imagen del producto */
+.item-carrito img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Información del producto */
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-info h3 {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.item-info .precio {
+    color: #6200ea;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Controles de cantidad */
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cantidad-control button {
+    background: #bb86fc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.cantidad-control button:hover {
+    background: #9965f4;
+}
+
+.cantidad-control span {
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+    background: transparent;
+    color: #b00020;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.btn-eliminar:hover {
+    color: #7f0018;
+}
+
+/* Botón de finalizar compra */
+.boton-compra-container {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.btn-md-3 {
+    background: #03dac5;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-md-3:hover {
+    background: #018786;
+    transform: translateY(-2px);
+}
+
+/* Resumen del carrito */
+.cart-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary .total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #6200ea;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #e0e0e0;
+}
+
+/* Carrito vacío */
+.carrito-vacio {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+#checkout-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#checkout-btn:hover {
+    background-color: #0056b3;
+}
+/* Contenedor de la imagen */
+.image-container {
+    width: 100%; /* Asegura que el contenedor ocupa todo el ancho de la card */
+    height: 200px; /* Define una altura fija */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que salga del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de las imágenes */
+.image-container img {
+    width: auto; /* Ajusta automáticamente el ancho */
+    height: 100%; /* Ajusta la altura para ocupar todo el contenedor */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+    border-radius: 8px; /* Opcional, para bordes redondeados */
+}

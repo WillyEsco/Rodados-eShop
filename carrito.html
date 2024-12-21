@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-cart.css">
+    <title>Carrito</title>
+</head>
+
+<body>
+    <!--  Encabezado del carrito -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+      <div style="flex: 1; display: flex; justify-content: flex-start;">
+        <img src="./images/cart.png" alt="Carrito" style="width: 100px;" />
+      </div>
+      <div style="flex: 2; text-align: center;">
+        <h1 style="font-size: 2em;">RODADOS eShop</h1>
+      </div>
+      <div style="flex: 1; display: flex; justify-content: flex-end;">
+        <a href="./index.html" class="icono-carrito" aria-label="Volver">
+          <i class="material-icons">arrow_back</i>
+        </a>
+      </div>
+    </header>
+
+    <!--      seccion principal del carrito -->
+
+    <section id="carrito" class="productos">
+      <div class="leftSideColumn" style="display: flex; flex-direction: column; align-items: center;">
+        <h2>Tu carrito</h2>
+        <img src="./images/mascota.png" style="width: 50%;" alt="">
+      </div>
+      
+        <div id="lista-carrito">
+            <!--    lista de productos en forma de cards que se agregarar como items del carrito-->
+        </div>
+
+        <div>
+            <button id="checkout-btn" class="mdc-button mdc-button--raised md-3" style="border-radius: 50px; display: flex; align-items: center;" onclick="realizarCompra()">
+               PROCESAR COMPRA <i class="material-icons" style="margin-left: 8px;">shopping_cart_checkout</i>
+            </button>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Logo -->
+          <div class="footer-logo">
+  
+            <!-- <img src="images/logo.png" alt="MegaShop Logo" /> -->
+          </div>
+          <img src="./images/logo.png" alt="Logo" class="logo" style="width: 10%;" />
+          <!-- Redes sociales -->
+          <div class="footer-social">
+            <a href="#" target="_blank" aria-label="Facebook">
+              <i class="material-icons">facebook</i>
+            </a>
+            <a href="#" target="_blank" aria-label="Instagram">
+              <i class="material-icons">instagram</i>
+            </a>
+            <a href="#" target="_blank" aria-label="TikTok">
+              <i class="material-icons">tiktok</i>
+            </a>
+          </div>
+  
+          <!-- Copyright -->
+          <div class="footer-copyright">
+            <p>&copy; 2024 Rodados eShop. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    <script src="./carrito.js"></script>
+</body>
+
+</html>

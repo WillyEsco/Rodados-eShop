@@ -1,0 +1,305 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente y colores globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6200ea; /* Color primario MD3 */
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+.icono-carrito{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icono-carrito span {
+    background-color: #ff6f00; /* Color secundario MD3 */
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+.icono-back{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.icono-back span {
+    background-color: #ff6f00; /* Color secundario MD3 */
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+/* Navegación */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    background-color: #bb86fc;
+    padding: 10px;
+    /* gap: 15px; */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3700b3;
+}
+
+/* Sección de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.producto h2 {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.producto p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.producto .precio {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #6200ea;
+}
+
+.producto button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #3700b3;
+}
+
+/* Carrito */
+#carrito {
+    padding: 20px;
+}
+
+#carrito h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #6200ea;
+}
+
+#lista-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#lista-carrito .producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#lista-carrito .producto p {
+    margin: 0;
+    color: #333;
+}
+
+#lista-carrito .producto .btn-eliminar {
+    background-color: #e53935; /* Rojo para eliminar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#lista-carrito .producto .btn-eliminar:hover {
+    background-color: #c62828;
+}
+
+button[onclick="realizarCompra()"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #03dac5; /* Color de confirmación */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[onclick="realizarCompra()"]:hover {
+    background-color: #018786;
+}
+/* --- Footer --- */
+.footer {
+    background-color: #6200ea; /* Color primario */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo img {
+    max-width: 120px;
+    border-radius: 8px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-social a:hover {
+    transform: scale(1.2);
+    color: #bb86fc; /* Color secundario */
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .footer-content {
+        gap: 10px;
+    }
+
+    .footer-social a {
+        font-size: 20px;
+    }
+}
+.producto.md-3 {
+    margin: 1rem; /* Margen uniforme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera para efecto flotante */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto.md-3:hover {
+    transform: translateY(-4px); /* Efecto de levitación */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+/* Estructura principal de la página */
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, contenido principal y footer */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    margin: 0;
+}
+
+/* Main ocupa todo el espacio disponible */
+main {
+    /* padding: 20px; */
+    background-color: hwb(0 96% 4%);
+}
+
+/* Footer en la parte inferior */
+.footer {
+    grid-row: 3; /* Posiciona explícitamente el footer en la tercera fila */
+    background-color: #6200ea;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+  nav {
+    margin: 0;
+    padding: 0;
+}
+
+/* header, nav {
+    border: 1px solid red;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
