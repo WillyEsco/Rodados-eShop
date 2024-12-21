@@ -187,4 +187,120 @@
     border-radius: 8px; /* Opcional, para bordes redondeados */
 }
 
- 
+ /* Contenedor principal del carrito */
+#carrito.productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Header del carrito con mascota */
+.leftSideColumn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.leftSideColumn h2 {
+    color: #6200ea;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.leftSideColumn img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Lista de productos */
+#lista-carrito {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Botón de checkout */
+#checkout-btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #6200ea;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #3700b3;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    #carrito.productos {
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .leftSideColumn {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leftSideColumn img {
+        width: 200px; /* Tamaño mediano en móvil */
+        margin: 1rem 0;
+    }
+
+    .item-carrito {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .item-info {
+        text-align: center;
+    }
+
+    .cantidad-control {
+        justify-content: center;
+    }
+
+    #checkout-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Mantener los estilos existentes del carrito */
+.item-carrito {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-summary {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6200ea;
+}

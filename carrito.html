@@ -36,22 +36,25 @@
     <!--      seccion principal del carrito -->
 
     <section id="carrito" class="productos">
-      <div class="leftSideColumn" style="display: flex; flex-direction: column; align-items: center;">
-        <h2>Tu carrito</h2>
-        <img src="./images/mascota.png" style="width: 50%;" alt="">
+      <!-- Header con mascota -->
+      <div class="leftSideColumn">
+          <h2>Tu carrito</h2>
+          <img src="./images/mascota.png" alt="Mascota">
       </div>
       
-        <div id="lista-carrito">
-            <!--    lista de productos en forma de cards que se agregarar como items del carrito-->
-        </div>
-
-        <div>
-            <button id="checkout-btn" class="mdc-button mdc-button--raised md-3" style="border-radius: 50px; display: flex; align-items: center;" onclick="realizarCompra()">
-               PROCESAR COMPRA <i class="material-icons" style="margin-left: 8px;">shopping_cart_checkout</i>
-            </button>
-        </div>
-
-    </section>
+      <!-- Lista de productos -->
+      <div id="lista-carrito">
+          <!-- Aquí se renderizan los productos -->
+      </div>
+  
+      <!-- Botón de checkout -->
+      <div style="text-align: center;">
+          <button id="checkout-btn" class="mdc-button mdc-button--raised md-3" onclick="realizarCompra()">
+              PROCESAR COMPRA 
+              <i class="material-icons" style="margin-left: 8px;">shopping_cart_checkout</i>
+          </button>
+      </div>
+  </section>
 
     <!-- Footer -->
     <footer class="footer">
