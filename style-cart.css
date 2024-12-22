@@ -2,7 +2,7 @@
 #carrito {
     max-width: 1500px;
     margin: 0 auto;
-    padding: 2rem;
+    /* padding: 2rem; */
 }
 
 #carrito h2 {
@@ -211,19 +211,19 @@
     margin: 0;
 }
 
-.leftSideColumn img {
+/* .leftSideColumn img {
     width: 150px;
     height: auto;
     object-fit: contain;
     margin: 0 !important;
-}
+} */
 .raby-cart {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
     /* background-color: #6200ea; */
     color: white;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     border: none;
     cursor: pointer;
     border-radius: 5px;
