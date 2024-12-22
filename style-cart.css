@@ -26,7 +26,7 @@
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
     border-bottom: 1px solid #e0e0e0;
     transition: background-color 0.2s ease;
 }
@@ -41,10 +41,10 @@
 
 /* Imagen del producto */
 .item-carrito img {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: auto;
     object-fit: cover;
-    border-radius: 8px;
+    /* border-radius: 8px; */
 }
 
 /* Información del producto */
