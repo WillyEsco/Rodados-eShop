@@ -23,19 +23,17 @@
         src="./images/logo3.png"
         alt="Logo"
         class="logo"
-        style=" height: 70px;"
+        style="height: 70px"
       />
       <!-- <h1>Ecommerce</h1> -->
       <a href="carrito.html" class="icono-carrito">
-        <img src="./images/cart.png" alt="Carrito" style=" height: 30px;" />
+        <img src="./images/cart.png" alt="Carrito" style="height: 30px" />
         <span id="contador-carrito">0</span>
       </a>
-  
     </header>
 
     <!-- Main -->
     <main>
-   
       <nav>
         <ul>
           <li><a href="#">Inicio</a></li>
@@ -43,128 +41,399 @@
           <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
-    
 
       <section class="productos">
-        
-        <!-- Cards de productos -->
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p1.jpg" alt="Producto 1" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <!-- <img src="./images/prod/p1.jpg" alt="Producto 1" style="width: 100%; height: auto; border-radius: 15px;" /> -->
+            <img
+              src="./images/prod/p1.jpg"
+              alt="Producto 1"
+  
+            />
           </div>
           <h2>Producto 1</h2>
           <p>Descripción del producto</p>
           <p class="precio">$100</p>
-          <button onclick="agregarAlcarrito('Producto 1', 100, './images/prod/p1.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 1', 100, './images/prod/p1.jpg')"
+          >
+            Agregar
+          </button>
+        </article>
+        <!-- Cards de productos -->
+        <article class="producto md-3">
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <!-- <img src="./images/prod/p1.jpg" alt="Producto 1" style="width: 100%; height: auto; border-radius: 15px;" /> -->
+            <img
+              src="./images/prod/p1.jpg"
+              alt="Producto 1"
+              style="height: 100%; object-fit: cover"
+            />
+          </div>
+          <h2>Producto 1</h2>
+          <p>Descripción del producto</p>
+          <p class="precio">$100</p>
+          <button
+            onclick="agregarAlcarrito('Producto 1', 100, './images/prod/p1.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p2.jpg" alt="Producto 2" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p2.jpg"
+              alt="Producto 2"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 2</h2>
           <p>Descripción del producto 2</p>
           <p class="precio">$200</p>
-          <button onclick="agregarAlcarrito('Producto 2', 200, './images/prod/p2.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 2', 200, './images/prod/p2.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p3.jpg" alt="Producto 3" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p3.jpg"
+              alt="Producto 3"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 3</h2>
           <p>Descripción del producto</p>
           <p class="precio">$300</p>
-          <button onclick="agregarAlcarrito('Producto 3', 300, './images/prod/p3.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 3', 300, './images/prod/p3.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p4.jpg" alt="Producto 4" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p4.jpg"
+              alt="Producto 4"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 4</h2>
           <p>Descripción del producto 4</p>
           <p class="precio">$400</p>
-          <button onclick="agregarAlcarrito('Producto 4', 400, './images/prod/p4.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 4', 400, './images/prod/p4.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p5.jpg" alt="Producto 5" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p5.jpg"
+              alt="Producto 5"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 5</h2>
           <p>Descripción del producto 5</p>
           <p class="precio">$500</p>
-          <button onclick="agregarAlcarrito('Producto 5', 500, './images/prod/p5.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 5', 500, './images/prod/p5.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p6.jpg" alt="Producto 6" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p6.jpg"
+              alt="Producto 6"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 6</h2>
           <p>Descripción del producto 6</p>
           <p class="precio">$600</p>
-          <button onclick="agregarAlcarrito('Producto 6', 600, './images/prod/p6.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 6', 600, './images/prod/p6.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p7.jpg" alt="Producto 7" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p7.jpg"
+              alt="Producto 7"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 7</h2>
           <p>Descripción del producto 7</p>
           <p class="precio">$700</p>
-          <button onclick="agregarAlcarrito('Producto 7', 700, './images/prod/p7.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 7', 700, './images/prod/p7.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p8.jpg" alt="Producto 8" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p8.jpg"
+              alt="Producto 8"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 8</h2>
           <p>Descripción del producto 8</p>
           <p class="precio">$800</p>
-          <button onclick="agregarAlcarrito('Producto 8', 800, './images/prod/p8.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 8', 800, './images/prod/p8.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p9.jpg" alt="Producto 9" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p9.jpg"
+              alt="Producto 9"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 9</h2>
           <p>Descripción del producto 9</p>
           <p class="precio">$900</p>
-          <button onclick="agregarAlcarrito('Producto 9', 900, './images/prod/p9.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 9', 900, './images/prod/p9.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p10.jpg" alt="Producto 10" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p10.jpg"
+              alt="Producto 10"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 10</h2>
           <p>Descripción del producto 10</p>
           <p class="precio">$1000</p>
-          <button onclick="agregarAlcarrito('Producto 10', 1000, './images/prod/p10.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 10', 1000, './images/prod/p10.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p11.jpg" alt="Producto 11" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p11.jpg"
+              alt="Producto 11"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 11</h2>
           <p>Descripción del producto 11</p>
           <p class="precio">$1100</p>
-          <button onclick="agregarAlcarrito('Producto 11', 1100, './images/prod/p11.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 11', 1100, './images/prod/p11.jpg')"
+          >
+            Agregar
+          </button>
         </article>
         <article class="producto md-3">
-          <div class="image-container" style="width: 100%; height: 220px; overflow: hidden; border-radius: 15px;">
-        <img src="./images/prod/p12.jpg" alt="Producto 12" style="width: 100%; height: auto; border-radius: 15px;" />
+          <div
+            class="image-container"
+            style="
+              width: 100%;
+              height: 220px;
+              overflow: hidden;
+              border-radius: 15px;
+            "
+          >
+            <img
+              src="./images/prod/p12.jpg"
+              alt="Producto 12"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 15px;
+                object-fit: cover;
+              "
+            />
           </div>
           <h2>Producto 12</h2>
           <p>Descripción del producto 12</p>
           <p class="precio">$1200</p>
-          <button onclick="agregarAlcarrito('Producto 12', 1200, './images/prod/p12.jpg')">Agregar</button>
+          <button
+            onclick="agregarAlcarrito('Producto 12', 1200, './images/prod/p12.jpg')"
+          >
+            Agregar
+          </button>
         </article>
       </section>
-        </main>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <!-- Logo -->
-        <div class="footer-logo">
-        </div>
+        <div class="footer-logo"></div>
         <img
           src="./images/logo.png"
           alt="Logo"
@@ -172,18 +441,30 @@
           style="width: 10%"
         />
         <!-- Redes sociales -->
- 
-      <div class="social-icons">
-        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://telegram.org" target="_blank"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.tiktok.com" target="_blank"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a href="https://wa.me/" target="_blank"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+          <a href="https://telegram.org" target="_blank"
+            ><i class="fab fa-telegram-plane"></i
+          ></a>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+        </div>
         <!-- Copyright -->
         <div class="footer-copyright">
-          <p>&copy; 2024 Rodados eShop. <br>Todos los derechos reservados.</p>
+          <p>&copy; 2024 Rodados eShop. <br />Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
