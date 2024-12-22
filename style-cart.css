@@ -191,9 +191,9 @@
 #carrito.productos {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem 2rem;
     display: grid;
-    gap: 2rem;
+    /* gap: 2rem; */
 }
 
 /* Header del carrito con mascota */
@@ -201,7 +201,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
+    /* gap: 1rem; */
     justify-content: center;
 }
 
