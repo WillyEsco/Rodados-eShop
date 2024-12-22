@@ -47,7 +47,7 @@
       <!-- Header con mascota -->
       <div class="leftSideColumn">
           <h2>Tu carrito</h2>
-          <img src="./images/mascota.png" alt="Mascota">
+          <!-- <img src="./images/mascota.png" alt="Mascota"> -->
       </div>
       
       <!-- Lista de productos -->
@@ -57,7 +57,12 @@
   
       <!-- Botón de checkout -->
       <div style="text-align: center;">
-          <button id="checkout-btn" class="mdc-button mdc-button--raised md-3" onclick="realizarCompra()" style="display: flex; align-items: center; justify-content: center; border-radius: 50px;">
+            <button id="checkout-btn" class="mdc-button mdc-button--raised md-3" onclick="realizarCompra()" style="display: flex; align-items: center; justify-content: center; border-radius: 50px;">
+            <style>
+            #checkout-btn:hover {
+              background-color: #ff6f00;
+            }
+            </style>
             <span style="font-weight: bold; font-size: 1.3em;">PROCESAR COMPRA</span>
           <i class="material-icons" style="margin-left: 8px;">shopping_cart_checkout</i>
           </button>

@@ -5,7 +5,8 @@ function renderizarCarrito() {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
     if (carrito.length === 0) {
-        listaCarrito.innerHTML = '<div class="carrito-vacio">Tu carrito está vacío</div>';
+        listaCarrito.innerHTML = 
+        '<div class="carrito-vacio"><img class= "raby-cart" src="./images/mascota.png" alt="Mascota"> Tu carrito está vacío</div>';
         return;
     }
 

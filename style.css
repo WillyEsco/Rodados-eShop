@@ -142,7 +142,9 @@ nav ul li a:hover {
 }
 
 .producto button:hover {
-    background-color: #3700b3;
+    /* background-color: #3700b3; */
+    background-color: #ff6f00; /* Color secundario MD3 */
+
 }
 
 
