@@ -451,7 +451,7 @@ main {
     position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 0.5);
-    padding: 1px;
+    padding: 20px;
     border-radius: 16px;
     margin-top: 60px;
 }
@@ -529,7 +529,7 @@ main {
 }
 
 /* Responsive */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .modal-content {
         width: 95%;
         margin: 30% auto;
@@ -539,4 +539,4 @@ main {
     .modal-message-container {
         margin-top: 50px;
     }
-} */
+}
