@@ -396,3 +396,147 @@ main {
         padding: 20px;
     }
 }
+
+/* Estilos del Modal con Material Design 3 y Mascota */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 24px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 28px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+/* Contenedor para la imagen de fondo */
+.modal-background {
+    position: absolute;
+    background-color: azure;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.modal-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Contenedor del mensaje */
+.modal-message-container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1px;
+    border-radius: 16px;
+    margin-top: 60px;
+}
+
+#modal-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #1f1f1f;
+    font-weight: 700; /* Increased font weight */
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Círculo de éxito */
+#modal-message::before {
+    content: '✓';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    margin-bottom: 8px;
+    position: absolute;
+    top: -45px;
+    left: 10%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 8px rgba(98, 0, 234, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #6200ea;
+    font-size: 24px;
+    text-decoration: none;
+    line-height: 1;
+    z-index: 3;
+}
+
+.close:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+        padding: 20px;
+    }
+    
+    .modal-message-container {
+        margin-top: 50px;
+    }
+}
