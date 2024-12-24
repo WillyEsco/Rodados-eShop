@@ -1,29 +1,7 @@
 // variable global para almacenar los productos seleccionados
 let carrito = [];
 
-// const agregarAlcarrito = (nombre,precio) =>{
-//     carrito.push({nombre,precio})
-//     actualizarContador()
-//     alert(`Agregaste : ${nombre} al carrito`)
-// }
 
-function agregarAlcarrito(nombre, precio, imagen) {
-    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const productoExistente = carrito.findIndex(item => item.nombre === nombre);
-    if (productoExistente !== -1) {
-        carrito[productoExistente].cantidad += 1;
-    } else {
-        carrito.push({
-            nombre: nombre,
-            precio: precio,
-            cantidad: 1, // Inicializamos la cantidad en 1
-            imagen: imagen || '/images/placeholder.jpg' // Usamos la imagen proporcionada o una por defecto
-        });
-    }
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContador()
-    // alert(`Agregaste : ${nombre} al carrito`)
-}
 
 // funcion para actualizar el contador del carrito
 const actualizarContador = ()=>{
@@ -38,3 +16,63 @@ window.addEventListener("beforeunload",()=>{
 localStorage.setItem("carrito",JSON.stringify(carrito))
 });
 
+// ---MODAL----
+// Elementos del modal
+const modal = document.getElementById("modal");
+const modalMessage = document.getElementById("modal-message");
+const span = document.getElementsByClassName("close")[0];
+
+// Función para mostrar el modal con animación
+function showModal(message) {
+    modalMessage.textContent = message;
+    modal.style.display = "block";
+    modal.classList.add("show");
+}
+
+// Función para ocultar el modal con animación
+function hideModal() {
+    modal.classList.remove("show");
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 300);
+}
+
+// Cerrar modal con el botón X
+span.onclick = function() {
+    hideModal();
+}
+
+// Cerrar modal haciendo clic fuera
+window.onclick = function(event) {
+    if (event.target == modal) {
+        hideModal();
+    }
+}
+
+// Modificar la función agregarAlcarrito
+function agregarAlcarrito(nombre, precio, imagen) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    
+    const productoExistente = carrito.find(item => item.nombre === nombre);
+    
+    if (productoExistente) {
+        productoExistente.cantidad++;
+        showModal(`¡Se agregó otra unidad de ${nombre}! Ahora tienes ${productoExistente.cantidad} unidades en el carrito.`);
+    } else {
+        carrito.push({
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen,
+            cantidad: 1
+        });
+        showModal(`¡${nombre} ha sido agregado al carrito!`);
+    }
+    
+    // Cerrar automáticamente después de 3 segundos
+    setTimeout(() => {
+        hideModal();
+    }, 3000);
+    
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarContadorCarrito();
+}
