@@ -51,7 +51,7 @@ window.onclick = function(event) {
 
 // Modificar la función agregarAlcarrito
 function agregarAlcarrito(nombre, precio, imagen) {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     
     const productoExistente = carrito.find(item => item.nombre === nombre);
     
@@ -74,5 +74,5 @@ function agregarAlcarrito(nombre, precio, imagen) {
     }, 3000);
     
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    actualizarContadorCarrito();
+    actualizarContador();
 }
