@@ -57,7 +57,30 @@ function agregarAlcarrito(nombre, precio, imagen) {
     
     if (productoExistente) {
         productoExistente.cantidad++;
-        showModal(`¡Se agregó otra unidad de ${nombre}! Ahora tienes ${productoExistente.cantidad} unidades en el carrito.`);
+        // showModal(`¡Se agregó otra unidad de ${nombre}! Ahora tienes ${productoExistente.cantidad} unidades en el carrito.`);
+        Swal.fire({
+            title: 'Cantidad actualizada',
+            icon: 'success',
+            text:`¡Se agregó otra unidad de ${nombre}! Ahora tienes ${productoExistente.cantidad} unidades en el carrito.`,
+            // imageUrl: './images/success.png',
+            // imageWidth: 150,
+            // imageHeight: 150,
+            // imageAlt: 'Imagen de éxito',
+            // confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Cerrar',
+            background: '#f4f4f4', // Fondo personalizado
+            // color: '#333',         // Color del texto
+            customClass: {
+                popup: 'swal-md3-popup',
+                confirmButton: 'swal-md3-button'
+            },
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+          });
     } else {
         carrito.push({
             nombre: nombre,
@@ -65,7 +88,28 @@ function agregarAlcarrito(nombre, precio, imagen) {
             imagen: imagen,
             cantidad: 1
         });
-        showModal(`¡${nombre} ha sido agregado al carrito!`);
+        // showModal(`¡${nombre} ha sido agregado al carrito!`);
+        Swal.fire({
+            title: '¡Producto agregado!',
+            text:  `¡${nombre} ha sido agregado al carrito!`,
+            imageUrl: './images/mascota-modal.png', // Ruta de tu imagen personalizada
+            imageWidth: 200,                 // Ancho de la imagen
+            imageHeight: 200,                // Altura de la imagen
+            imageAlt: 'Raby y Rabito con el carrito de compras', // Texto alternativo para accesibilidad
+            confirmButtonText: `Entendido!!!`,
+            background: '#f4f4f4', // Fondo personalizado
+            // color: '#333',         // Color del texto
+            customClass: {
+                popup: 'swal-md3-popup',
+                confirmButton: 'swal-md3-button'
+            },
+            showClass: {
+                popup: 'animate__animated animate__fadeInDown'
+            },
+            hideClass: {
+                popup: 'animate__animated animate__fadeOutUp'
+            }
+          });
     }
     
     // Cerrar automáticamente después de 3 segundos
